@@ -44,7 +44,7 @@ def call_function(function_call_part: types.FunctionCall, verbose=False):
         )
     else:
         keyword_args = function_call_part.args.copy() if function_call_part.args else {}
-        keyword_args["working_dir"] = "./calculator"
+        keyword_args["working_dir"] = "."
 
         result = fn(**keyword_args)
 
